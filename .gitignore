@@ -1,0 +1,41 @@
+# PlatformIO
+.pio/
+**/.pio/
+
+# Build artifacts
+*.bin
+*.elf
+*.hex
+*.map
+**/*.map
+compile_commands.json
+**/compile_commands.json
+
+# Private configuration and secrets
+include/private_config.h
+**/include/private_config.h
+*.env
+.env*
+
+# Editor & IDE
+.vscode/
+**/.vscode/
+.idea/
+**/.idea/
+
+# Python
+__pycache__/
+**/__pycache__/
+*.py[cod]
+*$py.class
+
+# OS
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Audio files and datasets
+*.wav
+**/*.wav
+tools/esp32_dataset/
+tools/voice_dataset/
