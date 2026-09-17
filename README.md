@@ -46,7 +46,7 @@
 | [**`stm32cam/`**](stm32cam/) | STM32H743VIT6 (480MHz Cortex-M7) | 摄像头采集、视频图传推流、SD卡MP3硬件解码、歌单拼音重排与歌词下发 |
 | [**`EdgeNode_A_Sensor/`**](EdgeNode_A_Sensor/) | ESP32 控制器 | 多维微环境感知（温湿度/气压/光强）、单色智能照明调光、ESP-NOW 无线组网 |
 | [**`tools/`**](tools/) | PC Python 辅助开发套件 | 唤醒词采集与训练图形化工具、离线机器学习分类训练器 |
-| [**`PROJECT_PROGRESS_REPORT.md`**](PROJECT_PROGRESS_REPORT.md) | 全局技术报告 | 详尽技术进展报告、系统交互时序、资源开销统计与 8 大已知工程挑战分析 |
+| [**`PROJECT_PROGRESS_REPORT.md`**](PROJECT_PROGRESS_REPORT.md) | 全局技术报告 | 详尽技术进展报告、系统交互时序、资源开销统计与 9 大已知工程挑战分析 |
 
 ---
 
@@ -79,5 +79,5 @@ pio run -e genericSTM32H743VI -t upload
 
 ## 📄 技术进展与已知问题
 
-详细系统架构、各模块功能清单及系统当前存在且尚未解决的 8 项工程挑战（包括移动网络定位偏差、多模态音频截断模型缺陷、音乐偶发掉帧、大音量放歌唤醒限制等），请参阅完整技术文档：  
+详细系统架构、各模块功能清单及系统当前存在且尚未解决的 9 项工程挑战（包括移动网络定位偏差、多模态音频截断模型缺陷、音乐偶发掉帧、大音量放歌唤醒限制、摄像头低分辨率视觉识别受限等），请参阅完整技术文档：  
 👉 [**PROJECT_PROGRESS_REPORT.md**](PROJECT_PROGRESS_REPORT.md)
