@@ -1,0 +1,141 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 680" width="1000" height="680">
+  <defs>
+    <!-- Markers for arrows -->
+    <marker id="arrow-down" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 10 5 L 0 8.5 z" fill="#64748B" />
+    </marker>
+    <marker id="arrow-up" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 10 1.5 L 0 5 L 10 8.5 z" fill="#64748B" />
+    </marker>
+    <marker id="arrow-blue" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 10 5 L 0 8.5 z" fill="#3B82F6" />
+    </marker>
+    
+    <!-- Filter for soft drop shadow -->
+    <filter id="card-shadow" x="-5%" y="-5%" width="110%" height="115%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0F172A" flood-opacity="0.06"/>
+    </filter>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="1000" height="680" fill="#F8FAFC" rx="16" stroke="#E2E8F0" stroke-width="1.5"/>
+
+  <!-- ========================================== -->
+  <!-- 1. TOP: Cloud LLM Service                  -->
+  <!-- ========================================== -->
+  <g transform="translate(290, 30)" filter="url(#card-shadow)">
+    <!-- Box -->
+    <rect width="420" height="110" rx="12" fill="#FFFFFF" stroke="#8B5CF6" stroke-width="2"/>
+    <!-- Header Badge -->
+    <rect x="16" y="14" width="84" height="22" rx="6" fill="#EDE9FE"/>
+    <text x="58" y="29" fill="#6D28D9" font-family="Microsoft YaHei, sans-serif" font-size="11" font-weight="bold" text-anchor="middle">云端服务</text>
+    <!-- Title -->
+    <text x="110" y="31" fill="#1E1B4B" font-family="Microsoft YaHei, sans-serif" font-size="16" font-weight="bold">通义千问大模型认知大脑</text>
+    <!-- Content bullets -->
+    <circle cx="28" cy="58" r="3" fill="#8B5CF6"/>
+    <text x="38" y="62" fill="#475569" font-family="Microsoft YaHei, sans-serif" font-size="13">Qwen-Omni 视觉与语音多模态云端理解</text>
+    <circle cx="28" cy="84" r="3" fill="#8B5CF6"/>
+    <text x="38" y="88" fill="#475569" font-family="Microsoft YaHei, sans-serif" font-size="13">Function Calling 工具调度契约与云端 TTS 语音播报</text>
+  </g>
+
+  <!-- Link 1: Cloud <-> Master Gateway S3 -->
+  <line x1="500" y1="140" x2="500" y2="195" stroke="#64748B" stroke-width="2" stroke-dasharray="4 4" marker-end="url(#arrow-down)" marker-start="url(#arrow-up)"/>
+  <!-- Label Pill -->
+  <g transform="translate(425, 154)">
+    <rect width="150" height="26" rx="13" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.2"/>
+    <text x="75" y="17" fill="#475569" font-family="Consolas, Microsoft YaHei, monospace" font-size="12" font-weight="bold" text-anchor="middle">WiFi (HTTPS / SSE)</text>
+  </g>
+
+  <!-- ========================================== -->
+  <!-- 2. MIDDLE: Master Gateway S3 (ESP32-S3)    -->
+  <!-- ========================================== -->
+  <g transform="translate(100, 200)" filter="url(#card-shadow)">
+    <!-- Box -->
+    <rect width="800" height="150" rx="12" fill="#FFFFFF" stroke="#3B82F6" stroke-width="2.5"/>
+    <!-- Header Badge -->
+    <rect x="20" y="16" width="96" height="24" rx="6" fill="#DBEAFE"/>
+    <text x="68" y="32" fill="#1D4ED8" font-family="Microsoft YaHei, sans-serif" font-size="12" font-weight="bold" text-anchor="middle">终端主控中枢</text>
+    <!-- Title -->
+    <text x="126" y="34" fill="#0F172A" font-family="Microsoft YaHei, sans-serif" font-size="17" font-weight="bold">ESP32-S3 桌面智能交互主控 (16MB Flash / 8MB PSRAM)</text>
+    
+    <!-- 2 Columns of Bullets -->
+    <!-- Col 1 -->
+    <circle cx="35" cy="68" r="3.5" fill="#3B82F6"/>
+    <text x="48" y="72" fill="#334155" font-family="Microsoft YaHei, sans-serif" font-size="13.5">端侧离线语音前端与唤醒：16通道 Mel 滤波器 + 8阶段 DTW 模板匹配</text>
+    <circle cx="35" cy="98" r="3.5" fill="#3B82F6"/>
+    <text x="48" y="102" fill="#334155" font-family="Microsoft YaHei, sans-serif" font-size="13.5">流式会话与 Skill 引擎：解析大模型 SSE 流，驱动外设控制与状态机分发</text>
+    <circle cx="35" cy="128" r="3.5" fill="#3B82F6"/>
+    <text x="48" y="132" fill="#334155" font-family="Microsoft YaHei, sans-serif" font-size="13.5">自研纯 C++ UI 引擎：驱动 2.8寸 ST7789 彩屏，提供 10 大功能面板卡片排版</text>
+
+    <!-- Col 2 -->
+    <circle cx="560" cy="68" r="3.5" fill="#3B82F6"/>
+    <text x="573" y="72" fill="#334155" font-family="Microsoft YaHei, sans-serif" font-size="13.5">Native USB 极速桌面投屏 (20+ FPS RLE 硬件级压缩)</text>
+    <circle cx="560" cy="98" r="3.5" fill="#3B82F6"/>
+    <text x="573" y="102" fill="#334155" font-family="Microsoft YaHei, sans-serif" font-size="13.5">双通道音频处理：I2S INMP441 拾音 + NS4168 功放播报</text>
+    <circle cx="560" cy="128" r="3.5" fill="#3B82F6"/>
+    <text x="573" y="132" fill="#334155" font-family="Microsoft YaHei, sans-serif" font-size="13.5">多总线协调：同步掌控 SPI DMA、UART RPC 与 ESP-NOW</text>
+  </g>
+
+  <!-- Bus Link Left: Master S3 -> STM32H743 -->
+  <path d="M 310 350 L 310 440" stroke="#64748B" stroke-width="2" fill="none" marker-end="url(#arrow-down)"/>
+  <!-- Label Left -->
+  <g transform="translate(195, 375)">
+    <rect width="230" height="38" rx="8" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.2"/>
+    <text x="115" y="17" fill="#1E293B" font-family="Consolas, Microsoft YaHei, monospace" font-size="12" font-weight="bold" text-anchor="middle">20MHz SPI DMA (媒体推流)</text>
+    <text x="115" y="31" fill="#64748B" font-family="Consolas, Microsoft YaHei, monospace" font-size="11" text-anchor="middle">UART 115200 (RPC播控与LRC歌词)</text>
+  </g>
+
+  <!-- Bus Link Right: Master S3 -> ESP32 Sensor -->
+  <path d="M 720 350 L 720 440" stroke="#64748B" stroke-width="2" stroke-dasharray="4 4" fill="none" marker-end="url(#arrow-down)" marker-start="url(#arrow-up)"/>
+  <!-- Label Right -->
+  <g transform="translate(615, 382)">
+    <rect width="210" height="26" rx="8" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.2"/>
+    <text x="105" y="17" fill="#1E293B" font-family="Consolas, Microsoft YaHei, monospace" font-size="12" font-weight="bold" text-anchor="middle">ESP-NOW (2.4GHz 无线传感网)</text>
+  </g>
+
+  <!-- ========================================== -->
+  <!-- 3. BOTTOM LEFT: STM32H743 Media Processor  -->
+  <!-- ========================================== -->
+  <g transform="translate(100, 450)" filter="url(#card-shadow)">
+    <!-- Box -->
+    <rect width="420" height="190" rx="12" fill="#FFFFFF" stroke="#F97316" stroke-width="2"/>
+    <!-- Header Badge -->
+    <rect x="18" y="16" width="100" height="22" rx="6" fill="#FFEDD5"/>
+    <text x="68" y="31" fill="#C2410C" font-family="Microsoft YaHei, sans-serif" font-size="11" font-weight="bold" text-anchor="middle">媒体协处理器</text>
+    <!-- Title -->
+    <text x="128" y="33" fill="#7C2D12" font-family="Microsoft YaHei, sans-serif" font-size="15" font-weight="bold">STM32H743VIT6 (480MHz M7)</text>
+
+    <!-- Bullets -->
+    <circle cx="28" cy="62" r="3.5" fill="#F97316"/>
+    <text x="40" y="66" fill="#334155" font-family="Microsoft YaHei, sans-serif" font-size="13">OV2640 摄像头捕获：DCMI 并行接口 + 乒乓缓冲</text>
+    <circle cx="28" cy="94" r="3.5" fill="#F97316"/>
+    <text x="40" y="98" fill="#334155" font-family="Microsoft YaHei, sans-serif" font-size="13">视频高速推送：20MHz SPI DMA 帧流实时推给主控</text>
+    <circle cx="28" cy="126" r="3.5" fill="#F97316"/>
+    <text x="40" y="130" fill="#334155" font-family="Microsoft YaHei, sans-serif" font-size="13">存储与音频解码：SD 卡 FatFS + Helix MP3 定点解码</text>
+    <circle cx="28" cy="158" r="3.5" fill="#F97316"/>
+    <text x="40" y="162" fill="#334155" font-family="Microsoft YaHei, sans-serif" font-size="13">歌单管理：两万字库拼音字母序重排 + LRC 逐句下发</text>
+  </g>
+
+  <!-- ========================================== -->
+  <!-- 4. BOTTOM RIGHT: ESP32 Sensor Node         -->
+  <!-- ========================================== -->
+  <g transform="translate(560, 450)" filter="url(#card-shadow)">
+    <!-- Box -->
+    <rect width="340" height="190" rx="12" fill="#FFFFFF" stroke="#10B981" stroke-width="2"/>
+    <!-- Header Badge -->
+    <rect x="18" y="16" width="94" height="22" rx="6" fill="#D1FAE5"/>
+    <text x="65" y="31" fill="#047857" font-family="Microsoft YaHei, sans-serif" font-size="11" font-weight="bold" text-anchor="middle">环境感知从节点</text>
+    <!-- Title -->
+    <text x="122" y="33" fill="#064E3B" font-family="Microsoft YaHei, sans-serif" font-size="15" font-weight="bold">ESP32 微环境扩展从机</text>
+
+    <!-- Bullets -->
+    <circle cx="28" cy="62" r="3.5" fill="#10B981"/>
+    <text x="40" y="66" fill="#334155" font-family="Microsoft YaHei, sans-serif" font-size="13">室内温湿度：DHT11 单总线数据采集</text>
+    <circle cx="28" cy="94" r="3.5" fill="#10B981"/>
+    <text x="40" y="98" fill="#334155" font-family="Microsoft YaHei, sans-serif" font-size="13">大气压强与海拔：MS5611 / GY-63 气压计</text>
+    <circle cx="28" cy="126" r="3.5" fill="#10B981"/>
+    <text x="40" y="130" fill="#334155" font-family="Microsoft YaHei, sans-serif" font-size="13">环境光照强度：VEML7700 高精度照度传感器</text>
+    <circle cx="28" cy="158" r="3.5" fill="#10B981"/>
+    <text x="40" y="162" fill="#334155" font-family="Microsoft YaHei, sans-serif" font-size="13">智能照明控制：LEDC PWM 0%~100% 平滑调光</text>
+  </g>
+</svg>
