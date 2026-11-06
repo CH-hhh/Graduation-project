@@ -39,3 +39,7 @@ Desktop.ini
 **/*.wav
 tools/esp32_dataset/
 tools/voice_dataset/
+
+# Workspace
+*.code-workspace
+**/*.code-workspace
